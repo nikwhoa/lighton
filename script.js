@@ -4,12 +4,23 @@ const data = async () => {
     return json;
 };
 
+const dataBase = async () => {
+    const response = await fetch('db.json');
+    const json = await response.json()
+    return json;
+}
+
 let hours = null;
 let minutes = null;
 let seconds = null;
 const light = document.querySelector('.light');
 
 data().then((res) => {
+
+    dataBase().then((res) => {
+
+    })
+
     if (res.lighton) {
         light.classList.add('green');
         light.textContent = '💡';

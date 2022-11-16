@@ -11,6 +11,7 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "browserify-fs": "^1.0.0",
     "cors": "^2.8.5",
     "domain-ping": "^0.2.1",
     "http-server": "^14.1.1",
