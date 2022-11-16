@@ -1,18 +1,16 @@
-// load local json file
 const data = async () => {
-    const response = await fetch('/p/islighton.json');
+    const response = await fetch('lighton.json');
     const json = await response.json();
     return json;
 };
 
-// let status = null;
 let hours = null;
 let minutes = null;
 let seconds = null;
 const light = document.querySelector('.light');
 
 data().then((res) => {
-    if (res.islighton) {
+    if (res.lighton) {
         light.classList.add('green');
         light.textContent = '💡';
     } else {
