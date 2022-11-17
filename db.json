@@ -1,8 +1,8 @@
 {
-  "lighton": "6 год. та 35 хв.",
-  "lightoff": "0 год. та 52 хв.",
-  "trueTS": 1668683214960,
-  "falseTS": 1668680051467,
+  "lighton": "2 год. та 35 хв.",
+  "lightoff": "4 год. та 34 хв.",
+  "trueTS": 1668696501624,
+  "falseTS": 1668705815659,
   "diff": 0,
-  "statusBar": false
+  "statusBar": true
 }
