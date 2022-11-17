@@ -1,3 +1,8 @@
 {
-    "test": "works!"
+  "lighton": "6 год. та 35 хв.",
+  "lightoff": "0 год. та 52 хв.",
+  "trueTS": 1668683214960,
+  "falseTS": 1668680051467,
+  "diff": 0,
+  "statusBar": false
 }
