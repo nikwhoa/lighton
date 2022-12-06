@@ -5,7 +5,13 @@ import { Low } from 'lowdb';
 import { JSONFile } from 'lowdb/node'
 import cron from 'node-cron';
 
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const file = join(__dirname, 'db.json')
+const adapter = new JSONFile(file)
+const db = new Low(adapter)
+await db.read()
 
+db.data = db.data
 
 // const rawdata = fs.readFileSync('lighton.json')
 //     console.log(rawdata.length);
@@ -64,9 +70,10 @@ import cron from 'node-cron';
 
 //     await db.write()
 // }
-cron.schedule('* * * * *', async function () {
+cron.schedule('*/2 * * * *', async function () {
 
-    const rawdata = fs.readFileSync('lighton.json')
+
+        const rawdata = fs.readFileSync('lighton.json')
     console.log(rawdata.length);
     if (rawdata.length === 0) {
         await new Promise(resolve => setTimeout(resolve, 40000));
@@ -76,13 +83,7 @@ cron.schedule('* * * * *', async function () {
     let lightData = JSON.parse(rawdata);
 
 
-    const __dirname = dirname(fileURLToPath(import.meta.url));
-    const file = join(__dirname, 'db.json')
-    const adapter = new JSONFile(file)
-    const db = new Low(adapter)
-    await db.read()
 
-    db.data = db.data
 
     // let trueTS = 1668636000000;
     // let falseTS = 1668636000000;
@@ -98,6 +99,12 @@ cron.schedule('* * * * *', async function () {
         return hours + " год. та " + minutes + " хв.";
     }
 
+    if (db.data.statusBar !== lightData.lighton) {
+        db.data.diff = true;
+    } else {
+        db.data.diff = false;
+    }
+
 
     if (lightData.lighton) {
         let d1 = db.data.trueTS
@@ -106,6 +113,8 @@ cron.schedule('* * * * *', async function () {
         db.data.statusBar = true
         console.log(dhm(d2 - d1));
         db.data.lighton = dhm(d2 - d1)
+
+
     } else {
         let d1 = db.data.falseTS
         let d2 = lightData.timestamp
@@ -113,10 +122,13 @@ cron.schedule('* * * * *', async function () {
         db.data.statusBar = false
         console.log(dhm(d2 - d1));
         db.data.lightoff = dhm(d2 - d1)
+
     }
 
 
+    console.log(`working! ${new Date().toLocaleTimeString()}`);
     await db.write()
 
-    console.log('working!');
+
+
 });
