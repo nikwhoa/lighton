@@ -26,6 +26,7 @@ const response = data.statusBar;
 
 const light = response ? 'Світло з\'явилось 💡' : 'Світло зникло 🔦'
 
+await new Promise(resolve => setTimeout(resolve, 15000));
 
 db.data = db.data
 
