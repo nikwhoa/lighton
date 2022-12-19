@@ -1,3 +1,7 @@
 node_modules
 db.json
 lighton.json
+p/bin/
+p/lib/
+p/lib64
+p/pyvenv.cfg
