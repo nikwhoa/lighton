@@ -35,7 +35,7 @@ console.log(`bot working ${new Date().toLocaleTimeString()}`);
 bot.start((ctx) => ctx.reply('Вітаю, для перевірки чи є світло: напишіть "світло" чи "свет", також можна перевірити за допомогою команди /checklight (просто нажміть на неї у цьому повідомленні 😉)'));
 bot.command('checklight', (ctx) => {
     const name = ctx.message.from.first_name;
-    ctx.reply(`Вітаю, ${name} \n${response ? `Світло є 💡\nПриблизно ${db.data.lighton}` : `Світла немає 🔦\nПриблизно ${db.data.lightoff}`}`)
+    ctx.reply(`Вітаю, ${name} \n${response ? `Світло є 💡\ ${db.data.lighton}` : `Світла немає 🔦\ ${db.data.lightoff}`}`)
 })
 bot.command('help', (ctx) => {
     const name = ctx.message.from.first_name;

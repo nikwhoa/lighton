@@ -21,13 +21,17 @@
         body {
             width: 100%;
             height: 100%;
-            overflow: hidden;
+            overflow-x: hidden;
         }
 
         body {
-            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
+            background-color: rgb(97, 97, 97);
+            background-image: url('https://images.norenko.net.ua/public/2022-12-20T23:36:59.322Z-bg-on.jpg.webp');
+            backdrop-filter: blur(3px);
+            -webkit-backdrop-filter: blur(3px);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
         }
 
         @keyframes gradient {
@@ -61,31 +65,57 @@
         .hours,
         .minutes,
         .seconds {
-
             display: contents;
         }
 
         h1 {
-            font-size: 9rem;
-            color: #fff;
+            font-size: 4rem;
+            color: #4f4f4f;
             text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        }
+        h3 {
+            font-size: 2rem;
+        }
+        .update-btn {
+            font-size: 1.3rem;
+            border: 1px solid #221f1f;
+            padding: 10px;
+            color: white;
+            background: #221f1f;
+            border-radius: 10px;
         }
 
         .check {
-            font-size: 1.2rem;
-            margin-top: 1rem;
+            font-size: 2rem;
+            margin-top: 4rem;
+        }
+
+        .light {
+            margin-bottom: 5rem;
         }
 
         svg {
             width: 100px;
         }
 
-        /* .green {
-            color: #23d5ab;
-            font-size: 100px;
-            font-weight: 700;
-            text-shadow: 0 0 10px #23d5ab;
+        .dark-gif,
+        .light-gif {
+            max-width: 60%;
         }
+
+        @media screen and (min-width: 900px) {
+
+            .dark-gif,
+            .light-gif {
+                max-width: 40%;
+            }
+        }
+
+        .green {
+            color: #d7c925 !important;
+        }
+
+        /*
         .red {
             color: #e82b2b;
             font-size: 100px;
@@ -95,16 +125,10 @@
     </style>
 </head>
 
-<body>
+<body class="body">
     <div class="wrapper">
-
-        <h1 class="light"></h1>
-        <div>Остання перевірка</div>
-        <span class="hours"></span>:<span class="minutes"></span>:<span class="seconds"></span>
+        <div class="light"></div>
         <div class="check"></div>
-        <br>
-        <div style="font-size: .9rem; width: 60%;">Якщо світла немає чи є більше ніж 24 години, то таймер обнулюється
-            🙃. На жаль зараз не маю часу для допрацювання цього питання.</div>
         <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 202.24 202.24">
             <defs>
                 <style>
@@ -128,7 +152,7 @@
         <h1 style="font-size: 3rem;">Сервіс не працює на цих вихідних.</h1> -->
     </div>
 
-    <script src="script.js"></script>
+    <script src="script-test.js"></script>
 </body>
 
 </html>
