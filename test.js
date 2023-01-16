@@ -3,7 +3,7 @@ const date = new Date();
 const time = date.toLocaleTimeString();
 
 
-// const hour = 21;
+// const hour = 12;
 const hour = date.getHours();
 // const day = 'Monday';
 const day = date.toLocaleDateString('en-US', { weekday: 'long' });
@@ -13,7 +13,7 @@ const schedule = JSON.parse(data);
 
 
 const currentDay = schedule[day];
-const currentTime = currentDay[12];
+const currentTime = currentDay[hour];
 
 let status = '';
 let nextStatus = '';
@@ -49,10 +49,22 @@ if (currentTime === true) {
     // }
 
 } else if (currentTime === 'maybe') {
-    status = '🗓️ За розкладом можливі відключення світла';
+
+    status = '🗓️ За розкладом:';
 
     for (let i = hour; i <= 23; i++) {
+        if (currentDay[i] === 'maybe') {
+            let begin = i;
+            while (currentDay[i] === 'maybe') {
+                i++;
+            }
+            maybeStatus = `🔦 Можливе відключення з ${begin}:00 до ${i}:00`;
+            // nextStatus = `💡 Світло буде з ${i}:00`;
+            break;
+        }
+    }
 
+    for (let i = hour; i <= 23; i++) {
         if (currentDay[i] === true) {
             let begin = i;
             while (currentDay[i] === true) {
@@ -63,6 +75,7 @@ if (currentTime === true) {
             break;
         }
     }
+
 } else {
     status = '🗓️ За розкладом: \n 🔦 Світло відсутнє';
 
@@ -86,7 +99,7 @@ if (currentTime === true) {
                 i++;
             }
 
-            maybeStatus = `☝️ Можливе включення з ${begin}:00 до ${i}:00`;
+            maybeStatus = `☝️ Можливе відключення з ${begin}:00 до ${i}:00`;
             // maybeStatus = `☝️ Можливе включення з ${i}:00 до ${i + 1}:00`;
             break;
         }
@@ -108,5 +121,7 @@ if (hour >= 22) {
         }
     }
 }
-
+console.log(status);
+console.log(nextStatus);
+console.log(maybeStatus);
 export { status, nextStatus, maybeStatus };

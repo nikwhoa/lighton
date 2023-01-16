@@ -1,6 +1,6 @@
 {
-  "comandUsage": 780,
-  "lastUsage": "3:15:46 PM",
+  "comandUsage": 804,
+  "lastUsage": "4:06:24 PM",
   "users": [
     {
       "name": "Nikita",
@@ -3785,6 +3785,150 @@
     {
       "name": "Nikita",
       "time": "3:15:46 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Anastasiia Hmelova",
+      "time": "3:17:44 PM",
+      "date": "1/16/2023",
+      "message": "message"
+    },
+    {
+      "name": "Ірина",
+      "time": "3:22:15 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Наталія",
+      "time": "3:28:11 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Nikita",
+      "time": "3:36:29 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Nikita",
+      "time": "3:37:33 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Nikita",
+      "time": "3:38:05 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Nikita",
+      "time": "3:38:15 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Nikita",
+      "time": "3:39:12 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Nikita",
+      "time": "3:39:12 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Nikita",
+      "time": "3:39:49 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Юлія",
+      "time": "3:46:12 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Asya",
+      "time": "3:46:44 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Ірина",
+      "time": "3:57:30 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Nikita",
+      "time": "3:59:17 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Nikita",
+      "time": "4:03:23 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Alex",
+      "time": "4:03:27 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Лена Ленина",
+      "time": "4:03:46 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Nikita",
+      "time": "4:04:30 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Fti13",
+      "time": "4:04:39 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Nikita",
+      "time": "4:04:51 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Nikita",
+      "time": "4:05:28 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Anastasiia Hmelova",
+      "time": "4:06:03 PM",
+      "date": "1/16/2023",
+      "message": "message"
+    },
+    {
+      "name": "Наталія",
+      "time": "4:06:05 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Nikita",
+      "time": "4:06:24 PM",
       "date": "1/16/2023",
       "message": "command"
     }

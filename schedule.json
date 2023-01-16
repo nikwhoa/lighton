@@ -8,11 +8,11 @@
         ,
         "3": "maybe"
         ,
-        "4": "maybe"
+        "4": true
         ,
         "5": true
         ,
-        "6": true
+        "6": false
         ,
         "7": false
         ,
