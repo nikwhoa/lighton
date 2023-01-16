@@ -1,6 +1,6 @@
 {
-  "comandUsage": 804,
-  "lastUsage": "4:06:24 PM",
+  "comandUsage": 862,
+  "lastUsage": "6:47:56 PM",
   "users": [
     {
       "name": "Nikita",
@@ -3929,6 +3929,354 @@
     {
       "name": "Nikita",
       "time": "4:06:24 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Юрий",
+      "time": "4:08:52 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Дмитро",
+      "time": "4:12:30 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Yulia",
+      "time": "4:17:28 PM",
+      "date": "1/16/2023",
+      "message": "message"
+    },
+    {
+      "name": "Nikita",
+      "time": "4:19:51 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Ірина",
+      "time": "4:21:25 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Irina",
+      "time": "4:24:50 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": ".",
+      "time": "4:27:00 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Олександр 🇺🇦",
+      "time": "4:28:23 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "ASH",
+      "time": "4:29:57 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Polina",
+      "time": "4:30:54 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Ірина",
+      "time": "4:36:40 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Alex",
+      "time": "4:37:25 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "К.",
+      "time": "4:38:16 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Dmitry",
+      "time": "4:38:29 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Александр",
+      "time": "4:39:01 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Ірина",
+      "time": "4:43:46 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Anastasiia Hmelova",
+      "time": "4:43:50 PM",
+      "date": "1/16/2023",
+      "message": "message"
+    },
+    {
+      "name": "Irina",
+      "time": "4:44:39 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Damir",
+      "time": "4:45:57 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Ната",
+      "time": "4:48:27 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Filonenko",
+      "time": "4:51:35 PM",
+      "date": "1/16/2023",
+      "message": "message"
+    },
+    {
+      "name": "Ната",
+      "time": "4:56:04 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Dmitry",
+      "time": "5:02:33 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Dmitry",
+      "time": "5:02:37 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Irina",
+      "time": "5:07:29 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Ірина",
+      "time": "5:08:16 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Polina",
+      "time": "5:10:50 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Олександр 🇺🇦",
+      "time": "5:14:35 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Ната",
+      "time": "5:14:48 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Наталія",
+      "time": "5:15:27 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Артем",
+      "time": "5:21:01 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Євген",
+      "time": "5:26:29 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Ірина",
+      "time": "5:37:55 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Ірина",
+      "time": "5:43:28 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Артем",
+      "time": "5:55:03 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Ната",
+      "time": "5:57:07 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Natasha",
+      "time": "5:58:26 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Natasha",
+      "time": "5:58:59 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Євген",
+      "time": "5:59:11 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Vladimir",
+      "time": "5:59:16 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Natasha",
+      "time": "6:00:10 PM",
+      "date": "1/16/2023",
+      "message": "message"
+    },
+    {
+      "name": "Natasha",
+      "time": "6:00:13 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Dmitry",
+      "time": "6:01:12 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Viktoriia",
+      "time": "6:02:14 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Anastasiia Hmelova",
+      "time": "6:02:27 PM",
+      "date": "1/16/2023",
+      "message": "message"
+    },
+    {
+      "name": "Alex",
+      "time": "6:04:22 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Olha",
+      "time": "6:04:48 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Ната",
+      "time": "6:11:31 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Ната",
+      "time": "6:15:11 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Ірина",
+      "time": "6:17:18 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Олександр 🇺🇦",
+      "time": "6:25:31 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Anastasiia Hmelova",
+      "time": "6:27:25 PM",
+      "date": "1/16/2023",
+      "message": "message"
+    },
+    {
+      "name": "Євген",
+      "time": "6:29:45 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Fti13",
+      "time": "6:30:25 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Євген",
+      "time": "6:45:50 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Natasha",
+      "time": "6:46:09 PM",
+      "date": "1/16/2023",
+      "message": "command"
+    },
+    {
+      "name": "Filonenko",
+      "time": "6:46:55 PM",
+      "date": "1/16/2023",
+      "message": "message"
+    },
+    {
+      "name": "Nikita",
+      "time": "6:47:56 PM",
       "date": "1/16/2023",
       "message": "command"
     }
