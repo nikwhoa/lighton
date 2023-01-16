@@ -13,7 +13,7 @@ const schedule = JSON.parse(data);
 
 
 const currentDay = schedule[day];
-const currentTime = currentDay[hour];
+const currentTime = currentDay[12];
 
 let status = '';
 let nextStatus = '';
@@ -32,7 +32,11 @@ if (currentTime === true) {
 
     for (let i = hour; i <= 23; i++) {
         if (currentDay[i] === false) {
-            nextStatus = `🔦 Світло буде вимкнене о ${i}:00`;
+            let begin = i;
+            while (currentDay[i] === false) {
+                i++;
+            }
+            nextStatus = `🔦 Світла не буде з ${begin}:00 до ${i}:00`;
             break;
         }
     }
@@ -45,43 +49,48 @@ if (currentTime === true) {
     // }
 
 } else if (currentTime === 'maybe') {
-    status = '🗓️ За розкладом можливо відключення';
+    status = '🗓️ За розкладом можливі відключення світла';
 
     for (let i = hour; i <= 23; i++) {
+
         if (currentDay[i] === true) {
-            nextStatus = `💡 Світло буде о ${i}:00`;
-            break;
-        }
-    }
-    for (let i = hour; i <= 23; i++) {
-        if (currentDay[i] === false) {
-            maybeStatus = `🔦 Світла не буде з ${i}:00`;
+            let begin = i;
+            while (currentDay[i] === true) {
+                i++;
+            }
+            nextStatus = `💡 Світло буде з ${begin}:00 до ${i}:00`;
+            // nextStatus = `💡 Світло буде з ${i}:00`;
             break;
         }
     }
 } else {
-    status = '🗓️ За розкладом світла немає';
+    status = '🗓️ За розкладом: \n 🔦 Світло відсутнє';
 
     for (let i = hour; i < 23; i++) {
         if (currentDay[i] === true) {
-            nextStatus = `💡 Світло буде о ${i}:00`;
+            let begin = i;
+            while (currentDay[i] === true) {
+                i++;
+            }
+            nextStatus = `💡 Світло буде з ${begin}:00 до ${i}:00`;
+            // nextStatus = `💡 Світло буде о ${i}:00`;
             break;
         }
     }
 
     for (let i = hour; i < 23; i++) {
         if (currentDay[i] === 'maybe') {
-            maybeStatus = `☝️ Можливе включення о ${i}:00`;
+            let begin = i;
+
+            while (currentDay[i] === 'maybe') {
+                i++;
+            }
+
+            maybeStatus = `☝️ Можливе включення з ${begin}:00 до ${i}:00`;
+            // maybeStatus = `☝️ Можливе включення з ${i}:00 до ${i + 1}:00`;
             break;
         }
     }
-
-    // for (let i = hour; i < 23; i++) {
-    //     if (currentDay[i] === false) {
-    //         maybeStatus = `🔦 Світла не буде з ${i}:00`;
-    //         break;
-    //     }
-    // }
 }
 
 if (hour >= 22) {
