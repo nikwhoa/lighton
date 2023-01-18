@@ -1,12 +1,12 @@
 import fs from 'fs';
 import {Telegraf} from 'telegraf'
-// import fetch from 'node-fetch'
 import * as dotenv from 'dotenv'
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { Low } from 'lowdb';
 import { JSONFile } from 'lowdb/node'
 import { status, nextStatus, maybeStatus  } from "./test.js";
+// import { outputOn, outputOff } from "./countHours.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const file = join(__dirname, 'db.json');
@@ -34,17 +34,13 @@ const response = data.statusBar;
 
 const light = response ? 'Світло з\'явилось 💡' : 'Світло зникло 🔦'
 
-// await new Promise(resolve => setTimeout(resolve, 15000));
-
 db.data = db.data
 
-// if (db.data.diff) {
-//     bot.telegram.sendMessage('@lightparadiseavenue', light + '\n' + '\n' + status + '\n' + maybeStatus + '\n' + nextStatus);
-// }
-
-// console.log(`bot working ${new Date().toLocaleTimeString()}`);
-
 bot.start((ctx) => ctx.reply('Вітаю, для перевірки чи є світло: напишіть "світло" чи "свет", також можна перевірити за допомогою команди /checklight (просто нажміть на неї у цьому повідомленні 😉)'));
+
+bot.command('stats', (ctx) => {
+    ctx.reply(outputOn + '\n' + outputOff);
+});
 
 bot.command('checklight', async (ctx) => {
     statsDb.data.comandUsage += 1;
@@ -63,14 +59,13 @@ bot.command('checklight', async (ctx) => {
     await statsDb.write();
     console.log('Stats on comand is updated');
 })
+
 bot.command('help', (ctx) => {
     const name = ctx.message.from.first_name;
     ctx.reply(`Вітаю, ${name}! \nЦей бот був створений для перевірки світла. Фактично перевіряється доступ окремої ip-адреси до інтернету, якщо доступ є то і світло є. На 100% довіряти боту не потрібно, тому що світло може бути, але якщо не буде інтернету то бот буде казати що світла немає.`)
 })
 
 bot.on('message', async (ctx) => {
-
-
     if (ctx.message.text.includes('світло') || ctx.message.text.includes('свет') || ctx.message.text.includes('Свет') || ctx.message.text.includes('Світло')) {
 
         statsDb.data.comandUsage += 1;
@@ -103,7 +98,5 @@ bot.on('message', async (ctx) => {
         console.log('Stats on i dont\' undestand is updated');
     }
 });
-
-
-
+console.log(`Bot is working ${new Date().toLocaleTimeString()}`);
 bot.launch();

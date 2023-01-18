@@ -15,7 +15,7 @@ db.data = db.data
 
 cron.schedule('*/1 * * * *', async function () {
     const rawdata = fs.readFileSync('lighton.json')
-    console.log(rawdata.length);
+
     if (rawdata.length === 0) {
         await new Promise(resolve => setTimeout(resolve, 20000));
         console.log('waiting...');

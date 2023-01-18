@@ -17,16 +17,13 @@ cron.schedule('*/1 * * * *', async function () {
 
 
     const rawdata = fs.readFileSync('lighton.json')
-    console.log(rawdata.length);
+
     if (rawdata.length === 0) {
         await new Promise(resolve => setTimeout(resolve, 40000));
         console.log('waiting...');
     }
 
     let lightData = JSON.parse(rawdata);
-
-    // let trueTS = 1668636000000;
-    // let falseTS = 1668636000000;
 
     function dhm(ms) {
         const days = Math.floor(ms / (24 * 60 * 60 * 1000));
@@ -50,18 +47,16 @@ cron.schedule('*/1 * * * *', async function () {
         let d2 = lightData.timestamp
         db.data.falseTS = lightData.timestamp
         db.data.statusBar = true
-        console.log(dhm(d2 - d1));
         db.data.lighton = dhm(d2 - d1)
     } else {
         let d1 = db.data.falseTS
         let d2 = lightData.timestamp
         db.data.trueTS = lightData.timestamp
         db.data.statusBar = false
-        console.log(dhm(d2 - d1));
         db.data.lightoff = dhm(d2 - d1)
 
     }
 
-    console.log(`working! ${new Date().toLocaleTimeString()}`);
+    console.log(`count hourse is working! ${new Date().toLocaleTimeString()}`);
     await db.write()
 });

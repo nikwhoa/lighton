@@ -28,10 +28,8 @@ const light = response ? 'Світло з\'явилось 💡' : 'Світло 
 
 await new Promise(resolve => setTimeout(resolve, 12000));
 
+console.log(`send status is working! ${new Date().toLocaleTimeString()}`);
 
 if (db.data.diff) {
     bot.telegram.sendMessage('@lightparadiseavenue', light + '\n' + '\n' + status + '\n' + maybeStatus + '\n' + nextStatus);
 }
-
-console.log(`bot working ${new Date().toLocaleTimeString()}`);
-// console.log();

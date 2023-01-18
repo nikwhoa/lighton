@@ -22,14 +22,6 @@ let maybeStatus = '';
 if (currentTime === true) {
     status = '🗓️ За розкладом світло є';
 
-    // next true status
-    // for (let i = hour; i <= 23; i++) {
-    //     if (currentDay[i] === true) {
-    //         nextStatus = `💡 Світло буде о ${i}:00`;
-    //         break;
-    //     }
-    // }
-
     for (let i = hour; i <= 23; i++) {
         if (currentDay[i] === false) {
             let begin = i;
@@ -41,13 +33,6 @@ if (currentTime === true) {
         }
     }
 
-    // for (let i = hour; i <= 23; i++) {
-    //     if (currentDay[i] === 'maybe') {
-    //         maybeStatus = `☝️ Можливе вимкнення о ${i}:00`;
-    //         break;
-    //     }
-    // }
-
 } else if (currentTime === 'maybe') {
 
     status = '🗓️ За розкладом:';
@@ -58,7 +43,7 @@ if (currentTime === true) {
             while (currentDay[i] === 'maybe') {
                 i++;
             }
-            maybeStatus = `🔦 Можливе відключення з ${begin}:00 до ${i}:00`;
+            maybeStatus = `🔦 Можливі відключення до ${i}:00`;
             // nextStatus = `💡 Світло буде з ${i}:00`;
             break;
         }
@@ -99,7 +84,7 @@ if (currentTime === true) {
                 i++;
             }
 
-            maybeStatus = `☝️ Можливе відключення з ${begin}:00 до ${i}:00`;
+            maybeStatus = `🔦 Можливі відключення з ${begin}:00 до ${i}:00`;
             // maybeStatus = `☝️ Можливе включення з ${i}:00 до ${i + 1}:00`;
             break;
         }
@@ -116,12 +101,10 @@ if (hour >= 22) {
     }
     for (let i = 0; i < 23; i++) {
         if (nextDay[i] === 'maybe') {
-            maybeStatus = `☝️ Можливе включення о ${i}:00`;
+            maybeStatus = `🔦 Можливі включення о ${i}:00`;
             break;
         }
     }
 }
-console.log(status);
-console.log(nextStatus);
-console.log(maybeStatus);
+
 export { status, nextStatus, maybeStatus };
