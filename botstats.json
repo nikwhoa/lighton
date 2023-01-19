@@ -1,6 +1,6 @@
 {
-  "comandUsage": 1626,
-  "lastUsage": "3:29:58 PM",
+  "comandUsage": 1627,
+  "lastUsage": "3:34:11 PM",
   "users": [
     {
       "name": "Nikita",
@@ -8861,6 +8861,12 @@
     {
       "name": "К.",
       "time": "3:29:58 PM",
+      "date": "1/19/2023",
+      "message": "command"
+    },
+    {
+      "name": "Nikita",
+      "time": "3:34:11 PM",
       "date": "1/19/2023",
       "message": "command"
     }

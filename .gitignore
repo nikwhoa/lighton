@@ -5,3 +5,5 @@ p/bin/
 p/lib/
 p/lib64
 p/pyvenv.cfg
+botstats.json
+countHours.json
