@@ -135,9 +135,9 @@ const countHoursOff = () => {
   let hours = 0;
 
   if (minutes >= 60 && minutes <= 120) {
-    hours = dbCount.data.lighton.output.reduce((a, b) => a + b.lightoff.hours, 0);
+    hours = dbCount.data.lighton.output.reduce((a, b) => a + b.lightoff.hours, 0) + 1;
   } else if (minutes < 60) {
-    hours = dbCount.data.lighton.output.reduce((a, b) => a + b.lightoff.hours, 0) - 1;
+    hours = dbCount.data.lighton.output.reduce((a, b) => a + b.lightoff.hours, 0);
   } else if (minutes >= 120 && minutes <= 180) {
     hours = dbCount.data.lighton.output.reduce((a, b) => a + b.lightoff.hours, 0) + 2;
   } else if (minutes >= 180 && minutes <= 240) {
@@ -155,9 +155,9 @@ const countHoursOn = () => {
   const minutes = dbCount.data.lightoff.output.reduce((a, b) => a + b.light.minutes, 0);
 
   if (minutes >= 60 && minutes <= 120) {
-    return dbCount.data.lightoff.output.reduce((a, b) => a + b.light.hours, 0);
+    return dbCount.data.lightoff.output.reduce((a, b) => a + b.light.hours, 0) + 1;
   } else if (minutes < 60) {
-    return dbCount.data.lightoff.output.reduce((a, b) => a + b.light.hours, 0) - 1;
+    return dbCount.data.lightoff.output.reduce((a, b) => a + b.light.hours, 0);
   } else if (minutes >= 120 && minutes <= 180) {
     return dbCount.data.lightoff.output.reduce((a, b) => a + b.light.hours, 0) + 2;
   } else if (minutes >= 180 && minutes <= 240) {
@@ -168,6 +168,25 @@ const countHoursOn = () => {
     return dbCount.data.lightoff.output.reduce((a, b) => a + b.light.hours, 0);
   }
 };
+
+dbCount.data.total = [
+  ...dbCount.data.total,
+  {
+    date: new Date().toLocaleString('uk-UA', {
+      month: 'long',
+      day: 'numeric',
+    }),
+    lightoff: {
+      hours: countHoursOff(),
+      minutes: dbCount.data.lighton.output.reduce((a, b) => a + b.lightoff.minutes, 0) % 60,
+    },
+    lighton: {
+      hours: countHoursOn(),
+      minutes: dbCount.data.lightoff.output.reduce((a, b) => a + b.light.minutes, 0) % 60,
+    },
+  },
+];
+await dbCount.write();
 
 if (new Date().getHours() === 23 && new Date().getMinutes() === 59) {
   dbCount.data.total = [
