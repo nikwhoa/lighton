@@ -46,7 +46,7 @@ bot.start((ctx) =>
 );
 
 bot.command('stats', (ctx) => {
-  const stats = countHoursDb.data.total[Object.keys(countHoursDb.data.total)[Object.keys(countHoursDb.data.total).length - 1]];
+  const stats = countHoursDb.data.totalToday[Object.keys(countHoursDb.data.total)[Object.keys(countHoursDb.data.total).length - 1]];
   const date = stats.date;
   const lighton = stats.lighton;
   const lightoff = stats.lightoff;

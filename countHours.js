@@ -21,11 +21,6 @@ await db.read();
 db.data = db.data;
 
 const fileDB = join(__dirname, 'db.json');
-
-// if (fileDB === undefined || fileDB === null || fileDB === '' || fileDB === ' ' ) {
-//     await new Promise(resolve => setTimeout(resolve, 10000));
-// }
-
 const adapterDB = new JSONFile(fileDB);
 const dbDB = new Low(adapterDB);
 await dbDB.read();
@@ -39,8 +34,6 @@ dbCount.data = dbCount.data;
 
 const diff = dbDB.data.diff;
 const light = dbDB.data.statusBar;
-// const diff = false;
-// const light = true;
 
 if (diff) {
   dbCount.data.begin = new Date().getTime();
@@ -169,24 +162,28 @@ const countHoursOn = () => {
   }
 };
 
-dbCount.data.total = [
-  ...dbCount.data.total,
-  {
-    date: new Date().toLocaleString('uk-UA', {
-      month: 'long',
-      day: 'numeric',
-    }),
-    lightoff: {
-      hours: countHoursOff(),
-      minutes: dbCount.data.lighton.output.reduce((a, b) => a + b.lightoff.minutes, 0) % 60,
+if (diff) {
+  await new Promise((resolve) => setTimeout(resolve, 10000));
+  dbCount.data.totalToday = [
+    ...dbCount.data.totalToday,
+    {
+      date: new Date().toLocaleString('uk-UA', {
+        month: 'long',
+        day: 'numeric',
+      }),
+      lightoff: {
+        hours: countHoursOff(),
+        minutes: dbCount.data.lighton.output.reduce((a, b) => a + b.lightoff.minutes, 0) % 60,
+      },
+      lighton: {
+        hours: countHoursOn(),
+        minutes: dbCount.data.lightoff.output.reduce((a, b) => a + b.light.minutes, 0) % 60,
+      },
     },
-    lighton: {
-      hours: countHoursOn(),
-      minutes: dbCount.data.lightoff.output.reduce((a, b) => a + b.light.minutes, 0) % 60,
-    },
-  },
-];
-await dbCount.write();
+  ];
+
+  await dbCount.write();
+}
 
 if (new Date().getHours() === 23 && new Date().getMinutes() === 59) {
   dbCount.data.total = [
