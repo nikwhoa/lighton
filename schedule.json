@@ -4,55 +4,6 @@
         ,
         "1": "maybe"
         ,
-        "2": "maybe"
-        ,
-        "3": "maybe"
-        ,
-        "4": true
-        ,
-        "5": true
-        ,
-        "6": false
-        ,
-        "7": false
-        ,
-        "8": "maybe"
-        ,
-        "9": "maybe"
-        ,
-        "10": "maybe"
-        ,
-        "11": "maybe"
-        ,
-        "12": true
-        ,
-        "13": true
-        ,
-        "14": false
-        ,
-        "15": false
-        ,
-        "16": "maybe"
-        ,
-        "17": "maybe"
-        ,
-        "18": "maybe"
-        ,
-        "19": "maybe"
-        ,
-        "20": true
-        ,
-        "21": true
-        ,
-        "22": false
-        ,
-        "23": false
-    },
-    "Tuesday": {
-        "0": "maybe"
-        ,
-        "1": "maybe"
-        ,
         "2": true
         ,
         "3": true
@@ -97,7 +48,7 @@
         ,
         "23": "maybe"
     },
-    "Wednesday": {
+    "Tuesday": {
         "0": true
         ,
         "1": true
@@ -146,7 +97,7 @@
         ,
         "23": "maybe"
     },
-    "Thursday": {
+    "Wednesday": {
         "0": false
         ,
         "1": false
@@ -195,7 +146,7 @@
         ,
         "23": true
     },
-    "Friday": {
+    "Thursday": {
         "0": "maybe"
         ,
         "1": "maybe"
@@ -243,103 +194,152 @@
         "22": false
         ,
         "23": false
+    },
+    "Friday": {
+        "0": "maybe"
+        ,
+        "1": "maybe"
+        ,
+        "2": true
+        ,
+        "3": true
+        ,
+        "4": false
+        ,
+        "5": false
+        ,
+        "6": "maybe"
+        ,
+        "7": "maybe"
+        ,
+        "8": "maybe"
+        ,
+        "9": "maybe"
+        ,
+        "10": true
+        ,
+        "11": true
+        ,
+        "12": false
+        ,
+        "13": false
+        ,
+        "14": "maybe"
+        ,
+        "15": "maybe"
+        ,
+        "16": "maybe"
+        ,
+        "17": "maybe"
+        ,
+        "18": true
+        ,
+        "19": true
+        ,
+        "20": false
+        ,
+        "21": false
+        ,
+        "22": "maybe"
+        ,
+        "23": "maybe"
     },
     "Saturday": {
         "0": "maybe"
         ,
         "1": "maybe"
         ,
-        "2": "maybe"
+        "2": true
         ,
-        "3": "maybe"
+        "3": true
         ,
-        "4": true
+        "4": false
         ,
-        "5": true
+        "5": false
         ,
-        "6": false
+        "6": "maybe"
         ,
-        "7": false
+        "7": "maybe"
         ,
         "8": "maybe"
         ,
         "9": "maybe"
         ,
-        "10": "maybe"
+        "10": true
         ,
-        "11": "maybe"
+        "11": true
         ,
-        "12": true
+        "12": false
         ,
-        "13": true
+        "13": false
         ,
-        "14": false
+        "14": "maybe"
         ,
-        "15": false
+        "15": "maybe"
         ,
         "16": "maybe"
         ,
         "17": "maybe"
         ,
-        "18": "maybe"
+        "18": true
         ,
-        "19": "maybe"
+        "19": true
         ,
-        "20": true
+        "20": false
         ,
-        "21": true
+        "21": false
         ,
-        "22": false
+        "22": "maybe"
         ,
-        "23": false
+        "23": "maybe"
     },
     "Sunday": {
         "0": "maybe"
         ,
         "1": "maybe"
         ,
-        "2": "maybe"
+        "2": true
         ,
-        "3": "maybe"
+        "3": true
         ,
-        "4": true
+        "4": false
         ,
-        "5": true
+        "5": false
         ,
-        "6": false
+        "6": "maybe"
         ,
-        "7": false
+        "7": "maybe"
         ,
         "8": "maybe"
         ,
         "9": "maybe"
         ,
-        "10": "maybe"
+        "10": true
         ,
-        "11": "maybe"
+        "11": true
         ,
-        "12": true
+        "12": false
         ,
-        "13": true
+        "13": false
         ,
-        "14": false
+        "14": "maybe"
         ,
-        "15": false
+        "15": "maybe"
         ,
         "16": "maybe"
         ,
         "17": "maybe"
         ,
-        "18": "maybe"
+        "18": true
         ,
-        "19": "maybe"
+        "19": true
         ,
-        "20": true
+        "20": false
         ,
-        "21": true
+        "21": false
         ,
-        "22": false
+        "22": "maybe"
         ,
-        "23": false
+        "23": "maybe"
     }
 }

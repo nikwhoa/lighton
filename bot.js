@@ -46,11 +46,29 @@ bot.start((ctx) =>
 );
 
 bot.command('stats', (ctx) => {
-  const stats = countHoursDb.data.totalToday[Object.keys(countHoursDb.data.total)[Object.keys(countHoursDb.data.total).length - 1]];
+
+  statsDb.data.comandUsage += 1;
+  statsDb.data.lastUsage = new Date().toLocaleTimeString();
+  statsDb.data.users = [
+    ...statsDb.data.users,
+    {
+      name: ctx.message.from.first_name,
+      time: new Date().toLocaleTimeString(),
+      date: new Date().toLocaleDateString(),
+      message: 'command stats',
+    },
+  ];
+
+  const stats = countHoursDb.data.totalToday[Object.keys(countHoursDb.data.totalToday)[Object.keys(countHoursDb.data.totalToday).length - 1]];
   const date = stats.date;
   const lighton = stats.lighton;
   const lightoff = stats.lightoff;
-  ctx.replyWithHTML(`<b>${date}</b>\n\nСвітло було протягом ${lighton.hours} год. ${lighton.minutes} хв. \nСвітла не було протягом ${lightoff.hours} год. ${lightoff.minutes} хв.`);
+  // ctx.replyWithHTML(
+  //   `<b>${date}</b>\n\nСвітло було протягом ${lighton.hours} год. ${lighton.minutes} хв. \nСвітла не було протягом ${lightoff.hours} год. ${lightoff.minutes} хв.\n\n❗️ Данні відображаються на момент останнього змінення статусу світла, а не на момент відправки команди.`,
+  // );
+  ctx.reply('Поки що ця команда не працює, вибачте за незручності 😔');
+  statsDb.write();
+  console.log('Stats on comand is updated');
 });
 
 bot.command('checklight', async (ctx) => {
@@ -62,7 +80,7 @@ bot.command('checklight', async (ctx) => {
       name: ctx.message.from.first_name,
       time: new Date().toLocaleTimeString(),
       date: new Date().toLocaleDateString(),
-      message: 'command',
+      message: 'command checklight',
     },
   ];
 
@@ -75,10 +93,23 @@ bot.command('checklight', async (ctx) => {
 });
 
 bot.command('help', (ctx) => {
+  statsDb.data.comandUsage += 1;
+  statsDb.data.lastUsage = new Date().toLocaleTimeString();
+  statsDb.data.users = [
+    ...statsDb.data.users,
+    {
+      name: ctx.message.from.first_name,
+      time: new Date().toLocaleTimeString(),
+      date: new Date().toLocaleDateString(),
+      message: 'command help',
+    },
+  ];
   const name = ctx.message.from.first_name;
   ctx.reply(
     `Вітаю, ${name}! \nЦей бот був створений для перевірки світла. Фактично перевіряється доступ окремої ip-адреси до інтернету, якщо доступ є то і світло є. На 100% довіряти боту не потрібно, тому що світло може бути, але якщо не буде інтернету то бот буде казати що світла немає.`,
   );
+  statsDb.write();
+  console.log('Stats on comand is updated');
 });
 
 bot.on('message', async (ctx) => {

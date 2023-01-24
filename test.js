@@ -93,6 +93,7 @@ if (currentTime === true) {
 
 if (hour >= 22) {
     const nextDay = schedule[Object.keys(schedule)[Object.keys(schedule).indexOf(day) + 1]];
+    // TODO: fix next day on sunday
     for (let i = 0; i < 23; i++) {
         if (nextDay[i] === true) {
             nextStatus = `💡 Світло буде о ${i}:00`;
