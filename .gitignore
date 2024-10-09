@@ -7,4 +7,3 @@ p/lib64
 p/pyvenv.cfg
 .idea
 node_modules/.DS_Store
-.env
